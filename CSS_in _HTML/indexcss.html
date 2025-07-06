@@ -26,99 +26,49 @@
 </body>
 </html> -->
 
-
+<!-- HTML5 document declaration -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Sets character encoding -->
     <meta charset="UTF-8">
+    
+    <!-- Makes layout responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Selector</title>
+
+    <!-- Page title in browser tab -->
+    <title>CSS</title>
+
+    <!-- Internal CSS starts here -->
     <style>
-        /*Element Selector */
-        div{
-            /* background-color: steelblue; */
+        /* CSS applied to both div and span elements */
+        div, span {
+            color: rgb(141, 81, 214); /* Purple text color */
+            background-color: rgb(207, 225, 133); /* Light greenish background */
         }
-
-       /* Class Selector */
-       .cornflowerblue{
-        background-color: cornflowerblue;
-       }
-
-       /* Id Selector */
-       #green{
-        background-color: green;
-       }
-
-       /* Child Selector */
-
-      /* Direct child <p> inside <div> */
-div > p {
-    color: hotpink;
-    background-color: rgb(207, 168, 13);
-}
-
-/* Deeply nested <p> inside <div>, such as in <article> */
-div article p {
-    color: aqua;
-    background-color: chocolate;
-}
-
-
-       /* univeral Selector */
-       *{
-        margin: 0;
-        padding: 0;
-       }
-
-       /* Pseudo Selector */
-
-       a:visited{
-        color: darkgreen;
-       }
-
-       a:link{
-        color: yellow;
-       }
-
-       a:active{
-        background-color: darkorchid;
-       }
-
-       a:hover{
-        background-color: rgb(24, 24, 23);
-       }
-
-       p:first-child{
-        background-color: darkgrey;
-       }
     </style>
 </head>
+
 <body>
-    <main class="one">
-        <p>i am first</p>
-        <p>i am second</p>
-    </main>
+
+    <!-- This div will have purple text and green background -->
     <div>
-        I am a div
+        Hi I am Prabhu 
     </div>
 
-    <div class="cornflowerblue">
-        i am also a div
+    <!-- Same styling as above -->
+    <div>
+        I am good
     </div>
 
-    <div id="green">
-        i am a double div
-        <p>I am a para</p>
-    </div>
+    <!-- Span also shares same styling (inline element) -->
+    <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, in sit quas asperiores minus hic, fuga, accusamus 
+    </span>
 
-    <div id="green1">
-        i am a double div
-        <article>
-        <p>I am a para</p>
-        </article>
-    </div>
+    <!-- This paragraph will have default styling (no CSS applied) -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos quos facere rerum minima neque quas esse ut asperiores illum?</p>
 
-    <a href="http://www.google.com">Go to Google</a>
-    <a href="http://www.youtube.com">Go to YouTube</a>
 </body>
 </html>
+

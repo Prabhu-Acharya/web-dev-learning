@@ -1,0 +1,67 @@
+CSS SELECTOR CHEAT SHEET (With Hinglish Comments)
+==================================================
+
+1. Universal Selector
+---------------------
+Selector:       *
+Matches:        Sabhi elements (All elements)
+Use:            Jab aap sabhi elements ka default margin, padding hataana chahte ho.
+Example:        * { margin: 0; padding: 0; }
+
+2. Element Selector
+-------------------
+Selector:       div
+Matches:        Sirf <div> elements
+Use:            Jab aap kisi specific tag (jaise div, p, h1) ko style dena chahte ho.
+Example:        div { background-color: blue; }
+
+3. Class Selector
+-----------------
+Selector:       .className
+Matches:        Jis bhi element mein yeh class lagi ho.
+Use:            Reusable styling ke liye. Ek class ko kai elements mein laga sakte ho.
+Example:        .box { padding: 20px; }
+
+4. ID Selector
+--------------
+Selector:       #idName
+Matches:        Sirf ek unique element (ID ek page mein sirf ek baar use hoti hai)
+Use:            Jab aap kisi ek particular element ko style dena chahte ho.
+Example:        #header { color: red; }
+
+5. Child Selector
+-----------------
+Selector:       parent > child
+Example:        div > p
+Matches:        Sirf wahi <p> jo direct child hai <div> ka.
+Use:            Jab aapko bas seedha andar ka element style karna ho.
+Example:        div > p { font-weight: bold; }
+
+6. Descendant Selector
+----------------------
+Selector:       ancestor descendant
+Example:        div p
+Matches:        <div> ke andar jitne bhi <p> hai, chahe wo kitna bhi nested ho.
+Use:            Sabhi andar ke elements ko target karna ho.
+Example:        div p { font-style: italic; }
+
+7. Link Pseudo-classes
+----------------------
+a:link     – Jo link abhi visit nahi hua
+a:visited  – Jo link pehle visit ho chuka hai
+a:hover    – Jab mouse link pe jata hai
+a:active   – Jab link click ho raha ho
+
+Use:        In se aap link ka behavior change kar sakte ho (colors, backgrounds etc.)
+Example:    
+a:link    { color: blue; }
+a:visited { color: green; }
+a:hover   { text-decoration: underline; }
+a:active  { background-color: yellow; }
+
+8. Structural Pseudo-class
+--------------------------
+Selector:       p:first-child
+Matches:        Jo <p> kisi parent ka pehla child ho
+Use:            Jab aapko sirf pehla element highlight karna ho.
+Example:        p:first-child { background-color: grey; }

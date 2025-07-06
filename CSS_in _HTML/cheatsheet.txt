@@ -1,0 +1,136 @@
+===============================
+ CSS in HTML Cheatsheet (.txt)
+===============================
+
+1. WAYS TO APPLY CSS
+-------------------------------
+a. Inline CSS:
+   Directly on the HTML element (not preferred for large codebases)
+
+   Example:
+   <p style="color: red;">This is red text.</p>
+
+b. Internal CSS:
+   Defined in <style> inside the <head>
+
+   Example:
+   <style>
+     h1 {
+       color: blue;
+     }
+   </style>
+
+c. External CSS:
+   Linked from an external .css file (best for large projects)
+
+   Example:
+   <link rel="stylesheet" href="style.css">
+
+2. BASIC SELECTORS
+-------------------------------
+
+a. Element Selector:
+   Targets all HTML elements of a specific type.
+
+   Example:
+   div {
+     color: green;
+   }
+
+b. Class Selector:
+   Targets elements with a specific class.
+
+   Example:
+   .highlight {
+     background-color: yellow;
+   }
+
+   Usage:
+   <p class="highlight">This is highlighted.</p>
+
+c. ID Selector:
+   Targets an element with a specific ID (should be unique).
+
+   Example:
+   #main-title {
+     font-size: 24px;
+   }
+
+   Usage:
+   <h1 id="main-title">Welcome</h1>
+
+d. Grouping Selector:
+   Apply same styles to multiple elements.
+
+   Example:
+   div, span {
+     color: purple;
+   }
+
+3. COMMON CSS PROPERTIES
+-------------------------------
+
+• color: Sets the text color.
+  Example: color: red;
+
+• background-color: Sets the background color.
+  Example: background-color: lightblue;
+
+• padding: Space inside element (inside border).
+  Example: padding: 10px;
+
+• margin: Space outside element.
+  Example: margin: 20px;
+
+• border: Border around element.
+  Example: border: 2px solid black;
+
+• font-family: Sets the font.
+  Example: font-family: Arial, sans-serif;
+
+• text-align: Aligns text (left, right, center).
+  Example: text-align: center;
+
+• height/width: Sets size of the box.
+  Example: width: 300px;
+
+• display: Controls layout behavior.
+  Example: display: inline-block;
+
+• box-sizing: border-box includes padding/border inside width.
+
+4. COMMENTS IN CSS
+-------------------------------
+• Syntax:
+  /* This is a CSS comment */
+
+5. FULL EXAMPLE (Internal CSS)
+-------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div, span {
+      color: rgb(141, 81, 214);
+      background-color: rgb(207, 225, 133);
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>Hi I am Prabhu</div>
+  <div>I am good</div>
+  <span>Lorem ipsum dolor sit amet.</span>
+  <p>This paragraph has no CSS.</p>
+</body>
+</html>
+
+6. TIPS
+-------------------------------
+• Use class for reusable styles.
+• Avoid styling with tags only on big pages.
+• Internal CSS is good for small pages or testing.
+• External CSS is ideal for multiple HTML pages.
+
+===============================

@@ -1,0 +1,157 @@
+===========================================
+       CSS Box Model Cheatsheet (with Examples)
+===========================================
+
+1. box-sizing: border-box
+--------------------------
+• Includes padding and border within total width/height.
+• Prevents layout breaking.
+
+Example:
+.box {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  box-sizing: border-box; /* total width = 200px */
+}
+
+2. display: flex
+--------------------------
+• Enables Flexbox layout.
+• Items align in a row by default.
+
+Example:
+.container {
+  display: flex;
+}
+
+3. justify-content
+--------------------------
+• Aligns items horizontally.
+
+Values:
+  center | space-between | space-around | flex-start | flex-end
+
+Example:
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+4. align-items
+--------------------------
+• Aligns items vertically.
+
+Values:
+  center | flex-start | flex-end | baseline
+
+Example:
+.container {
+  display: flex;
+  align-items: center;
+}
+
+5. flex-wrap
+--------------------------
+• Allows items to wrap in a new row if space runs out.
+
+Example:
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+6. padding
+--------------------------
+• Space inside the border (around content).
+
+Example:
+.box {
+  padding: 15px;
+}
+
+7. margin
+--------------------------
+• Space outside the border (between elements).
+
+Example:
+.box {
+  margin: 20px;
+}
+
+8. border
+--------------------------
+• Line surrounding the element.
+
+Example:
+.box {
+  border: 2px solid black;
+}
+
+9. border-radius
+--------------------------
+• Rounds the box corners.
+
+Example:
+.box {
+  border-radius: 10px;
+}
+
+10. transition
+--------------------------
+• Adds smooth animation on property change.
+
+Example:
+.box {
+  transition: transform 0.3s ease;
+}
+
+11. transform: scale()
+--------------------------
+• Scales the element (zoom in/out).
+
+Example:
+.box:hover {
+  transform: scale(1.05);
+}
+
+12. media query
+--------------------------
+• Makes layout responsive.
+
+Example:
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+13. text-align
+--------------------------
+• Aligns text inside an element.
+
+Example:
+.box {
+  text-align: center;
+}
+
+14. font-family
+--------------------------
+• Sets the font of text.
+
+Example:
+body {
+  font-family: Arial, sans-serif;
+}
+
+15. height & width
+--------------------------
+• Sets the size of the element.
+
+Example:
+.box {
+  height: 200px;
+  width: 250px;
+}
+
+===========================================

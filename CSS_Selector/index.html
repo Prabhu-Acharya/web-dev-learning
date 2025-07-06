@@ -1,0 +1,240 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /*Element Selector */
+        div{
+            /* background-color: steelblue; */
+        }
+
+       /* Class Selector */
+       .cornflowerblue{
+        background-color: cornflowerblue;
+       }
+
+       /* Id Selector */
+       #green{
+        background-color: green;
+       }
+
+       /* Child Selector */
+
+       div > p{
+        color:hotpink ;
+        background-color: rgb(207, 168, 13);
+       }
+
+       /* Descendent Selector */
+       div p{
+        color: aqua;
+        background-color: chocolate;
+       }
+
+       /* univeral Selector */
+       *{
+        margin: auto;
+        padding: auto;
+       }
+
+       /* Pseudo Selector */
+
+       a:visited{
+        color: darkgreen;
+       }
+
+       a:link{
+        color: yellow;
+       }
+
+       a:active{
+        background-color: darkorchid;
+       }
+
+       a:hover{
+        background-color: rgb(24, 24, 23);
+       }
+
+       p:first-child{
+        background-color: darkgrey;
+       }
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>i am first</p>
+        <p>i am second</p>
+    </main>
+    <div>
+        I am a div
+    </div>
+
+    <div class="cornflowerblue">
+        i am also a div
+    </div>
+
+    <div id="green">
+        i am a double div
+        <p>I am a para</p>
+    </div>
+
+    <div id="green">
+        i am a double div
+        <article>
+        <p>I am a para</p>
+        </article>
+    </div>
+
+    <a href="http://www.google.com">Go to Google</a>
+    <a href="http://www.youtube.com">Go to YouTube</a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Selector Explained</title>
+  <style>
+    /* ===========================
+       Universal Selector
+       ---------------------------
+       Applies to all elements.
+       Good for resetting margins/paddings.
+    =========================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* Ensures padding doesn't add to element's width */
+    }
+
+    /* ===========================
+       Element Selector: div
+       ---------------------------
+       Targets all <div> elements.
+       Use when you want to style every div.
+    =========================== */
+    div {
+      /* background-color: steelblue; */ /* Optional default style */
+    }
+
+    /* ===========================
+       Class Selector: .cornflowerblue
+       ---------------------------
+       Use to apply same styling to multiple elements.
+       Reusable across any tag: <div>, <section>, <p>, etc.
+    =========================== */
+    .cornflowerblue {
+      background-color: cornflowerblue;
+    }
+
+    /* ===========================
+       ID Selector: #green
+       ---------------------------
+       ID should be unique on the page.
+       Used for targeting one specific element.
+    =========================== */
+    #green {
+      background-color: green;
+    }
+
+    /* ===========================
+       Child Selector: div > p
+       ---------------------------
+       Styles only <p> that are *direct children* of a <div>.
+       Use for targeting structured layouts.
+    =========================== */
+    div > p {
+      color: hotpink;
+      background-color: rgb(207, 168, 13);
+    }
+
+    /* ===========================
+       Descendant Selector: div p
+       ---------------------------
+       Targets all <p> inside a <div>, at *any level*.
+       Includes nested structures like <div><article><p></p></article></div>
+    =========================== */
+    div p {
+      color: aqua;
+      background-color: chocolate;
+    }
+
+    /* ===========================
+       Pseudo Selectors for <a> links
+       ---------------------------
+       a:link – unvisited links
+       a:visited – already visited links
+       a:hover – when mouse hovers
+       a:active – when clicked
+       Use for interactivity and UX feedback.
+    =========================== */
+    a:link {
+      color: yellow;
+    }
+
+    a:visited {
+      color: darkgreen;
+    }
+
+    a:hover {
+      background-color: rgb(24, 24, 23);
+    }
+
+    a:active {
+      background-color: darkorchid;
+    }
+
+    /* ===========================
+       Structural Pseudo-class: p:first-child
+       ---------------------------
+       Styles <p> if it is the first child of its parent.
+       Useful in articles, comments, sections.
+    =========================== */
+    p:first-child {
+      background-color: darkgrey;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- main used as a section container -->
+  <main class="one">
+    <p>I am first</p> <!-- Gets styled by p:first-child -->
+    <p>I am second</p>
+  </main>
+
+  <!-- Normal <div> -->
+  <div>
+    I am a div
+  </div>
+
+  <!-- Class selector usage -->
+  <div class="cornflowerblue">
+    I am also a div
+  </div>
+
+  <!-- ID selector and child <p> (triggers div > p and div p) -->
+  <div id="green">
+    I am a double div
+    <p>I am a para</p> <!-- Matches both div > p and div p -->
+  </div>
+
+  <!-- Unique ID for second green div to avoid duplicate ID error -->
+  <div id="green-alt">
+    I am another green div
+    <article>
+      <p>I am a para</p> <!-- Matches only div p (descendant), not div > p -->
+    </article>
+  </div>
+
+  <!-- Anchor links to test pseudo-classes -->
+  <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Go to Google</a><br />
+  <a href="http://www.youtube.com" target="_blank" rel="noopener noreferrer">Go to YouTube</a>
+
+</body>
+</html>

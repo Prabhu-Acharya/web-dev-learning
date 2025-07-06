@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
  <html lang="en">
  <head>
     <meta charset="UTF-8">
@@ -36,5 +36,88 @@
     <div class="box box1">I am a box</div>
     <div class="box box2">I am another box</div>
  </body>
- </html>
+ </html> -->
 
+ <!-- IMPROVED VERSION -->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Mobile responsive design ke liye: device width ke hisaab se layout adjust hoga -->
+  <title>CSS Box Model Improved</title>
+
+  <style>
+    /* Resetting default margin and padding of all elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* Padding aur border ko total width/height mein include karta hai */
+    }
+
+    /* Page background and font */
+    body {
+      font-family: Arial, sans-serif; /* Clean and readable font */
+      background-color: #f5f5f5;       /* Light grey background for better contrast */
+    }
+
+    /* Container to wrap boxes and control layout */
+    .container {
+      display: flex;                  /* Flexbox layout for side-by-side boxes */
+      justify-content: space-around; /* Equal space around each box */
+      align-items: center;           /* Vertically center align boxes */
+      flex-wrap: wrap;               /* Agar screen chhoti ho to boxes neeche aa jayein */
+      padding: 30px;                 /* Space around the whole container */
+    }
+
+    /* Common box styling */
+    .box {
+      background-color: rgb(160, 235, 231); /* Light aqua background */
+      border: 2px solid black;              /* Black border to show box edge */
+      padding: 10px;                        /* Inner space inside the box */
+      margin: 20px;                         /* Outer space around the box */
+      height: 200px;                        /* Fixed height */
+      width: 250px;                         /* Fixed width */
+      display: flex;                        /* Centering content inside */
+      justify-content: center;             /* Horizontally center content */
+      align-items: center;                 /* Vertically center content */
+      text-align: center;                  /* Center align the text */
+      border-radius: 12px;                 /* Rounded corners */
+      transition: transform 0.3s ease, background-color 0.3s ease; 
+      /* Smooth animation on hover */
+    }
+
+    /* First box specific color */
+    .box1 {
+      color: orange; /* Text color for box1 */
+    }
+
+    /* Second box specific color */
+    .box2 {
+      color: rgb(40, 175, 92); /* Text color for box2 */
+    }
+
+    /* Hover effect for all boxes */
+    .box:hover {
+      transform: scale(1.05);             /* Slightly enlarges the box */
+      background-color: rgb(134, 219, 216); /* Slightly darker shade on hover */
+    }
+
+    /* Media Query: For smaller screens (e.g., phones) */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column; /* Boxes stack vertically on small screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Container wrapping both boxes -->
+  <div class="container">
+    <div class="box box1">I am a box</div>         <!-- Orange text box -->
+    <div class="box box2">I am another box</div>   <!-- Green text box -->
+  </div>
+</body>
+</html> 

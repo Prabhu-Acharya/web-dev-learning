@@ -1,0 +1,124 @@
+<!-- //APPLYING CSS WITHIN HTML 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        div, span{
+            color: rgb(141, 81, 214);
+            background-color: rgb(207, 225, 133);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Hi I am Prabhu 
+    </div>
+    <div>
+        I am good
+    </div>
+    <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, in sit quas asperiores minus hic, fuga, accusamus 
+    </span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dignissimos quos facere rerum minima neque quas esse ut asperiores illum?</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /*Element Selector */
+        div{
+            /* background-color: steelblue; */
+        }
+
+       /* Class Selector */
+       .cornflowerblue{
+        background-color: cornflowerblue;
+       }
+
+       /* Id Selector */
+       #green{
+        background-color: green;
+       }
+
+       /* Child Selector */
+
+      /* Direct child <p> inside <div> */
+div > p {
+    color: hotpink;
+    background-color: rgb(207, 168, 13);
+}
+
+/* Deeply nested <p> inside <div>, such as in <article> */
+div article p {
+    color: aqua;
+    background-color: chocolate;
+}
+
+
+       /* univeral Selector */
+       *{
+        margin: 0;
+        padding: 0;
+       }
+
+       /* Pseudo Selector */
+
+       a:visited{
+        color: darkgreen;
+       }
+
+       a:link{
+        color: yellow;
+       }
+
+       a:active{
+        background-color: darkorchid;
+       }
+
+       a:hover{
+        background-color: rgb(24, 24, 23);
+       }
+
+       p:first-child{
+        background-color: darkgrey;
+       }
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>i am first</p>
+        <p>i am second</p>
+    </main>
+    <div>
+        I am a div
+    </div>
+
+    <div class="cornflowerblue">
+        i am also a div
+    </div>
+
+    <div id="green">
+        i am a double div
+        <p>I am a para</p>
+    </div>
+
+    <div id="green1">
+        i am a double div
+        <article>
+        <p>I am a para</p>
+        </article>
+    </div>
+
+    <a href="http://www.google.com">Go to Google</a>
+    <a href="http://www.youtube.com">Go to YouTube</a>
+</body>
+</html>

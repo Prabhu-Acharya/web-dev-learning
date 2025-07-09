@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 12px;
+        }
+
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 2048px; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aquamarine;
+        }
+
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 2048px; */
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            margin: 23px auto;
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+
+        .container > div{
+            font-size: 2em; 
+            border: 2px solid red;
+            width: 50%;
+        }
+
+        .container > div > div{
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        .mycont{ 
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+
+    <div class="container">
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit illum autem praesentium, voluptate modi molestiae nisi qui accusantium corporis, delectus nobis consequuntur, repellat pariatur cumque officiis veritatis dicta quam explicabo nam. Tempora rem dolorum vel hic sint similique tempore recusandae laboriosam harum fugiat aliquam totam vero, ex architecto iusto. Consequatur sapiente impedit delectus placeat est soluta obcaecati reiciendis id aliquam? Ab natus nulla vitae odit repudiandae fuga tenetur voluptas ut ad asperiores ratione ipsam vero, blanditiis corporis inventore? Repellat suscipit sint nesciunt, accusamus impedit tempora porro ipsum assumenda hic omnis aperiam possimus. Debitis corporis tenetur sit nemo laboriosam illo rerum.
+
+            <div>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus distinctio doloribus omnis perferendis, asperiores maxime, dolores corporis mollitia optio repellat magnam qui quos tenetur? Non repudiandae consequatur excepturi ut sint?
+            </div>
+        </div>
+
+    </div>
+    <div class="mycont">
+        I  am another container
+    </div>
+</body>
+</html>

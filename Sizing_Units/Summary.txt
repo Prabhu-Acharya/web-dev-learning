@@ -1,0 +1,143 @@
+CSS Units Cheatsheet with Use Cases
+====================================
+
+1. px (Pixels - Fixed)
+------------------------
+- Description: Absolute, fixed-size unit.
+- Relative to: Nothing (always exact).
+- Example:
+    font-size: 18px;
+    border: 2px solid black;
+- Use Case:
+    ✅ Borders
+    ✅ Thin lines/shapes
+    ✅ Small spacing where exact control is needed
+    ❌ Avoid for font size in responsive design
+
+------------------------------------
+
+2. % (Percentage)
+-------------------
+- Description: Relative to parent element.
+- Relative to: Width/height of the parent.
+- Example:
+    width: 50%;
+- Use Case:
+    ✅ Nested boxes
+    ✅ Widths or heights that adjust with parent
+    ❌ Avoid in fonts (can be unpredictable)
+
+------------------------------------
+
+3. em (Relative to Parent Font Size)
+-------------------------------------
+- Description: Relative to parent’s font size.
+- Relative to: Immediate parent element.
+- Example:
+    font-size: 2em;  /* 2 × parent font-size */
+- Use Case:
+    ✅ Scalable font sizes inside containers
+    ✅ Padding/margin based on text size
+    ❌ Can compound unexpectedly in nested elements
+
+------------------------------------
+
+4. rem (Relative to Root Element)
+----------------------------------
+- Description: Relative to `<html>` font-size.
+- Relative to: Root font size (default 16px unless changed).
+- Example:
+    font-size: 1.5rem;  /* 1.5 × html's font-size */
+- Use Case:
+    ✅ Consistent font scaling across entire page
+    ✅ Better than `em` for uniform typography
+    ❌ Slightly harder to override in nested components
+
+------------------------------------
+
+5. vw (Viewport Width)
+------------------------
+- Description: 1vw = 1% of browser window width.
+- Relative to: Viewport width.
+- Example:
+    width: 80vw;
+- Use Case:
+    ✅ Responsive layouts
+    ✅ Full-width banners
+    ❌ Avoid for font sizes on small screens
+
+------------------------------------
+
+6. vh (Viewport Height)
+-------------------------
+- Description: 1vh = 1% of browser window height.
+- Relative to: Viewport height.
+- Example:
+    height: 10vh;
+- Use Case:
+    ✅ Hero sections
+    ✅ Full-page containers
+    ❌ Scroll-based sections (causes cutoff sometimes)
+
+------------------------------------
+
+7. vmin (Smaller of vw or vh)
+------------------------------
+- Description: 1vmin = 1% of smaller viewport dimension.
+- Relative to: Min(viewport width, height).
+- Example:
+    width: 100vmin;
+- Use Case:
+    ✅ Square elements
+    ✅ Safe area coverage
+    ❌ Needs testing on varying devices
+
+------------------------------------
+
+8. auto
+--------
+- Description: Automatically calculated by browser.
+- Relative to: Context.
+- Example:
+    margin: auto;
+- Use Case:
+    ✅ Centering elements horizontally
+    ✅ Flexible layout behavior
+    ❌ Not for fixed layout values
+
+====================================
+
+Your Code Examples Recap:
+--------------------------
+
+.container {
+    width: 80vw;         // 80% of screen width
+    min-height: 80vh;    // At least 80% screen height
+    font-size: 18px;     // Fixed font size
+}
+
+.container > div {
+    font-size: 2em;      // 2 × 18px = 36px
+    width: 50%;          // 50% of container
+}
+
+.container > div > div {
+    width: 50%;          // 25% of container (nested)
+}
+
+.mycont {
+    width: 80vw;
+    font-size: 22px;
+    // width: 100vmin;   // would match smaller screen side
+}
+
+====================================
+
+Recommended Best Practices:
+---------------------------
+- Use `rem` for base font sizes (consistent + scalable)
+- Use `%` for container widths/paddings
+- Use `vw/vh` for full screen responsiveness
+- Use `px` sparingly for borders or small spacing
+- Avoid deep nesting of `em`
+

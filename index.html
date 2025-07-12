@@ -86,4 +86,143 @@
 </body>
 </html> -->
  
-//
+//Card
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: grey;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background-color: white;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid rgb(0, 8, 12);
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            display: block;
+        }
+
+        .capsules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding: 10px 16px;
+        }
+
+        .capsules span {
+            border: 1px solid gray;
+            border-radius: 12px;
+            font-size: 14px;
+            padding: 4px 10px;
+            background-color: #f0f0f0;
+        }
+
+        .content {
+            padding: 0 16px 10px 16px;
+        }
+
+        .content h2 {
+            font-size: 20px;
+            margin: 10px 0 6px 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .content p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .button {
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .button button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: rgb(216, 236, 253);
+            color: rgb(14, 150, 234);
+            font-size: 15px;
+            margin-top: 10px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button button:hover {
+            background-color: rgb(151, 199, 237);
+            color: rgb(10, 136, 214);
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 10px;
+                flex-direction: column;
+            }
+
+            .card {
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="image">
+            <img src="https://121clicks.com/wp-content/uploads/2024/09/colors-of-india-travel-photography-07.jpg" alt="Colorful sunset over Indian landscape">
+        </div>
+
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Sunset</span>
+        </div>
+
+        <div class="content">
+            <h2>Sunset's Embrace: A Natural Marvel</h2>
+            <p>
+                As the sun dips below the horizon, the sky transforms into a breathtaking tapestry of colors —
+                fiery oranges, soft pinks, and serene purples — reminding us of nature's endless artistry.
+                This daily spectacle offers a moment of tranquility and connection, inviting us to pause and
+                appreciate the simple yet profound beauty that unfolds with each passing day.
+            </p>
+        </div>
+
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+
+</html>

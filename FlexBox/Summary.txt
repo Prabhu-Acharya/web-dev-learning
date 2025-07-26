@@ -1,0 +1,116 @@
+===========================
+ FLEXBOX CHEATSHEET (CSS)
+===========================
+
+# 1. Display
+-------------
+display: flex;
+- Enables Flexbox on the container.
+
+# 2. Flex Direction
+---------------------
+flex-direction: row | row-reverse | column | column-reverse;
+
+Example:
+  flex-direction: row;   /* Default: left to right */
+  flex-direction: column;/* Stack items vertically */
+
+# 3. Flex Wrap
+---------------
+flex-wrap: nowrap | wrap | wrap-reverse;
+
+Example:
+  flex-wrap: wrap;   /* Allow items to move to next row */
+
+# 4. Flex Flow (Shorthand)
+----------------------------
+flex-flow: <flex-direction> <flex-wrap>;
+
+Example:
+  flex-flow: row wrap;
+
+# 5. Justify Content (Main Axis)
+---------------------------------
+justify-content: 
+  flex-start | flex-end | center | space-between | space-around | space-evenly;
+
+Example:
+  justify-content: center; /* Items centered horizontally */
+
+# 6. Align Items (Cross Axis)
+------------------------------
+align-items:
+  stretch | flex-start | flex-end | center | baseline;
+
+Example:
+  align-items: center; /* Items aligned vertically center */
+
+# 7. Align Content (Multi-line containers)
+--------------------------------------------
+align-content:
+  flex-start | flex-end | center | space-between | space-around | stretch;
+
+Example:
+  align-content: space-between;
+
+# 8. Align Self (Individual item alignment)
+--------------------------------------------
+align-self:
+  auto | flex-start | flex-end | center | baseline | stretch;
+
+Example:
+  align-self: flex-end;
+
+# 9. Flex Item Properties
+--------------------------
+flex-grow: <number>;
+flex-shrink: <number>;
+flex-basis: <length | auto>;
+
+Shorthand:
+  flex: <grow> <shrink> <basis>;
+
+Example:
+  flex: 1 1 100px;
+
+# 10. Order
+-------------
+order: <integer>;
+
+Example:
+  order: 2; /* Appears after order: 1 or order: 0 */
+
+# 11. Gap (Spacing)
+---------------------
+gap: <row-gap> <column-gap>;
+
+Example:
+  gap: 40px 10px;
+
+============================
+ PRACTICAL EXAMPLE
+============================
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid blue;
+}
+
+============================
+ NOTES
+============================
+- Flexbox is one-dimensional: use Grid for 2D layouts.
+- Main axis = direction of flex-direction.
+- Cross axis = perpendicular to main axis.
+- No justify-items in Flexbox (only in Grid).
